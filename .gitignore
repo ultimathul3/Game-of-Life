@@ -1,2 +1,4 @@
-Game of Life
-main.o
+Game-of-Life
+.obj
+user_template
+.vscode
