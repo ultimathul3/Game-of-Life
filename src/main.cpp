@@ -52,7 +52,10 @@ int main()
 			controls(event);
 		}
 		
-		mouse();
+		if (run)
+			next_gen();
+		else
+			mouse();
 
 		window->clear(Color(150, 150, 150));
 		draw();
