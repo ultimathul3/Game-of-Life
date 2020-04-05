@@ -1,21 +1,20 @@
-SRC_DIR=src/
-OBJ_DIR=.obj/
 LIBS=-lsfml-graphics -lsfml-window -lsfml-system
-CPP=main.cpp controls.cpp draw.cpp load_template.cpp next_gen.cpp mouse.cpp
 NAME=Game-of-Life
+OBJ_DIR=.obj/
+SRC_DIR=src/
 
-SOURCES=$(wildcard $(SRC_DIR)*.cpp)
 OBJECTS=$(subst $(SRC_DIR),$(OBJ_DIR),$(SOURCES:.cpp=.o))
+SOURCES=$(wildcard $(SRC_DIR)*.cpp)
 
 run: $(OBJECTS)
 	mv *.o .obj/ || true
 	g++ $(OBJECTS) -o $(NAME) $(LIBS)
 	./$(NAME)
 
-all: clean $(OBJECTS)
-	mv *.o .obj/ || true
-	g++ $(OBJECTS) -o $(NAME) $(LIBS)
-	./$(NAME)
+clean:
+	rm -rf $(OBJ_DIR)*.o
+
+all: clean run
 
 $(OBJ_DIR)main.o: $(SRC_DIR)main.cpp
 	g++ -c $(SRC_DIR)main.cpp
@@ -34,6 +33,3 @@ $(OBJ_DIR)next_gen.o: $(SRC_DIR)next_gen.cpp
 
 $(OBJ_DIR)mouse.o: $(SRC_DIR)mouse.cpp
 	g++ -c $(SRC_DIR)mouse.cpp
-
-clean:
-	rm -rf $(OBJ_DIR)*.o

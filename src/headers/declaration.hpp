@@ -1,3 +1,7 @@
+#ifndef DECLARATION_HPP
+#define DECLARATION
+
+
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -25,3 +29,6 @@ void controls(Event &event);
 void next_gen();
 void mouse();
 void draw();
+
+
+#endif
