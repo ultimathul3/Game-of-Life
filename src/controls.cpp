@@ -43,5 +43,17 @@ void controls(Event &event)
         load_template("templates/spaceships");
     
     if (event.type == Event::KeyReleased && event.key.code == Keyboard::Num3) 
+        load_template("templates/15x15");
+    
+    if (event.type == Event::KeyReleased && event.key.code == Keyboard::Num4) 
+        load_template("templates/pulsar");
+    
+    if (event.type == Event::KeyReleased && event.key.code == Keyboard::Num5) 
+        load_template("templates/eight");
+
+    if (event.type == Event::KeyReleased && event.key.code == Keyboard::Num6) 
+        load_template("templates/pentadecathlon");
+    
+    if (event.type == Event::KeyReleased && event.key.code == Keyboard::Num7) 
         load_template("templates/r-pentamino");
 }

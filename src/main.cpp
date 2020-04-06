@@ -40,7 +40,11 @@ int main()
 	cout << "Press S to save user template. Press L to load user template." << endl;
 	cout << "Press 1 to load gun template." << endl;
 	cout << "Press 2 to load spaceships template." << endl;
-	cout << "Press 3 to load R-pentamino template." << endl;
+	cout << "Press 3 to load 15x15 template." << endl;
+	cout << "Press 4 to load pulsar template." << endl;
+	cout << "Press 5 to load eight template." << endl;
+	cout << "Press 6 to load pentadecathlon template." << endl;
+	cout << "Press 7 to load R-pentamino template." << endl;
 
 	while (window->isOpen())
 	{
