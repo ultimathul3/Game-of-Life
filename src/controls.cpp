@@ -33,27 +33,18 @@ void controls(Event &event)
         file.close();
     }
 
-    if (event.type == Event::KeyReleased && event.key.code == Keyboard::L) 
-        load_template("templates/user_template");
-
-    if (event.type == Event::KeyReleased && event.key.code == Keyboard::Num1) 
-        load_template("templates/gun");
-    
-    if (event.type == Event::KeyReleased && event.key.code == Keyboard::Num2) 
-        load_template("templates/spaceships");
-    
-    if (event.type == Event::KeyReleased && event.key.code == Keyboard::Num3) 
-        load_template("templates/15x15");
-    
-    if (event.type == Event::KeyReleased && event.key.code == Keyboard::Num4) 
-        load_template("templates/pulsar");
-    
-    if (event.type == Event::KeyReleased && event.key.code == Keyboard::Num5) 
-        load_template("templates/eight");
-
-    if (event.type == Event::KeyReleased && event.key.code == Keyboard::Num6) 
-        load_template("templates/pentadecathlon");
-    
-    if (event.type == Event::KeyReleased && event.key.code == Keyboard::Num7) 
-        load_template("templates/r-pentamino");
+    if (event.type == Event::KeyReleased)
+    {
+        switch(event.key.code)
+        {
+        case Keyboard::L: load_template("user_template"); break;
+        case Keyboard::Num1: load_template("gun"); break;
+        case Keyboard::Num2: load_template("spaceships"); break;
+        case Keyboard::Num3: load_template("15x15"); break;
+        case Keyboard::Num4: load_template("pulsar"); break;
+        case Keyboard::Num5: load_template("eight"); break;
+        case Keyboard::Num6: load_template("pentadecathlon"); break;
+        case Keyboard::Num7: load_template("r-pentamino"); break;
+        }
+    }
 }

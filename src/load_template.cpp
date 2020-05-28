@@ -6,7 +6,7 @@ void load_template(string name)
 	int _cells_size = cells_size;
 	run = false;
 
-	ifstream file(name);
+	ifstream file("templates/" + name);
 	file >> _cells_size;
 
 	if (_cells_size != cells_size)
