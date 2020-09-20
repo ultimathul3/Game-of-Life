@@ -7,6 +7,7 @@ OBJECTS=$(subst $(SRC_DIR),$(OBJ_DIR),$(SOURCES:.cpp=.o))
 SOURCES=$(wildcard $(SRC_DIR)*.cpp)
 
 run: $(OBJECTS)
+	mkdir .obj || true
 	mv *.o .obj/ || true
 	g++ $(OBJECTS) -o $(NAME) $(LIBS)
 	./$(NAME)

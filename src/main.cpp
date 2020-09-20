@@ -22,7 +22,7 @@ int main()
 	N = height / cells_size, M = width / cells_size;
 	world.assign(2,  vector2d(N, vector<int>(M, 0)));
 
-	window = new RenderWindow(VideoMode(width, height), "Game of Live");
+	window = new RenderWindow(VideoMode(width, height), "Game of Life");
 
 	for (int i = 0; i < N; i++)
 		for (int j = 0; j < M; j++)
