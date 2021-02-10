@@ -18,7 +18,7 @@ void load_template(string name)
 		
 		cell.setSize(Vector2f(cells_size, cells_size));
 		window->close();
-		window = new RenderWindow(VideoMode(width, height), "Game of Live");
+		window = new RenderWindow(VideoMode(width, height), "Game of Life");
 	}
 
 	for (int i = 0; i < N; i++)
